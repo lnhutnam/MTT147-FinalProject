@@ -1,0 +1,11 @@
+https://github.com/ELIXIREstonia/2024-03-22-R-basic/blob/main/2023-10-24-R_basic.Rmd
+
+https://rpubs.com/Manas_Narang/893936
+
+https://rpubs.com/geogya/1025422
+
+https://www.kaggle.com/code/shashwatwork/analysis-of-islanders-data
+
+https://www.kaggle.com/code/steveahn/drug-memory-anova-tukey-hsd-experiment
+
+https://www.kaggle.com/code/steveahn/saleprice-eda-feature-e-model-prep
