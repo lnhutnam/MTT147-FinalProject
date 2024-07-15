@@ -1,11 +1,3 @@
-Install Pandoc
+# MTT147: Final Project
 
-Install Xelatex
-
-```
-chmod +x ./build.sh
-```
-
-```
-./build.sh
-``
+## Information 

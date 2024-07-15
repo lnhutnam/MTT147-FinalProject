@@ -1,0 +1,9 @@
+cff-version: 0.0.1
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Le"
+  given-names: "Nam"
+- family-names: "Thanh"
+  given-names: "Pham"
+title: "Project in Statistical Modelling"
+url: "https://github.com/lnhutnam/MTT147-FinalProject"
