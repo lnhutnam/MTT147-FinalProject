@@ -1,0 +1,177 @@
+\chapter{GIỚI THIỆU TỔNG QUAN ĐỒ ÁN}
+
+
+
+\section{Giới thiệu đồ án}
+
+Báo cáo này là bài viết tổng hợp quá trình thực hiện đồ án môn học Mô hình hóa thống kê. Đồ án này bao gồm hai hoạt động:
+\begin{itemize}
+    \item Hoạt động 1: Thực hiện các yêu cầu cho tập dữ liệu Islander và CSM.
+    \item Hoạt động 2: Tự chọn 3 bộ dữ liệu và thực hiện lại các yêu cầu.
+\end{itemize}
+
+\section{Phân công và kế hoạch thực hiện đồ án}
+
+\subsection{Phân công Hoạt động 1 - Dữ liệu Islander}
+
+\begin{table}[H]
+\centering
+\caption{Bảng phân công Hoạt động 1 - Dữ liệu Islander}
+\label{tab:phancong0}
+\begin{tabular}{llll}
+\hline
+\multicolumn{1}{|l|}{STT} & \multicolumn{1}{l|}{Công việc}                          & \multicolumn{1}{l|}{Người thực hiện} & \multicolumn{1}{l|}{Kết quả}    \\ \hline
+\multicolumn{1}{|l|}{1}   & \multicolumn{1}{l|}{Đọc dữ liệu và tiền xử lý}          & \multicolumn{1}{l|}{Nam}             & \multicolumn{1}{l|}{Hoàn thành} \\ \hline
+\multicolumn{1}{|l|}{2}   & \multicolumn{1}{l|}{Kiểm định các giả thiết thống kê}   & \multicolumn{1}{l|}{Thành}           & \multicolumn{1}{l|}{Hoàn thành} \\ \hline
+\multicolumn{1}{|l|}{3}   & \multicolumn{1}{l|}{Phân tích phương sai k nhân tố}     & \multicolumn{1}{l|}{Thành}           & \multicolumn{1}{l|}{Hoàn thành} \\ \hline
+\multicolumn{1}{|l|}{4}   & \multicolumn{1}{l|}{Xây dựng và kiểm định mô hình cộng} & \multicolumn{1}{l|}{Nam}             & \multicolumn{1}{l|}{Hoàn thành} \\ \hline
+\multicolumn{1}{|l|}{5}   & \multicolumn{1}{l|}{Cải tiến mô hình}                   & \multicolumn{1}{l|}{Thành}           & \multicolumn{1}{l|}{Hoàn thành} \\ \hline           
+\end{tabular}
+\end{table}
+
+\subsection{Phân công Hoạt động 1 - Dữ liệu CSM}
+
+Trong hoạt động này, nhóm đã đan xen xử lý nếu giả thiết mô hình không thỏa thì nhóm đã sử dụng luôn box-cox transformation, loại bỏ ngoại lai bằng Cook Distance.
+
+\begin{table}[H]
+    \centering 
+    \caption{Bảng phân công Hoạt động 1 - Dữ liệu CSM}
+    \label{tab:phancong1}
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    STT & Công việc                                                   & Người thực hiện & Kết quả    \\ \hline
+    1   & Đọc dữ liệu và tiền xử lý                                   & Nam             & Hoàn thành \\ \hline
+    2   & Khám phá và tiền xử lý dữ liệu                              & Thành           & Hoàn thành \\ \hline
+    3   & Xử lý missing values (loại bỏ hoàn toàn)                    & Nam             & Hoàn thành \\ \hline
+    4   & Xử lý missing values (điền mean, median, zeros)             & Thành           & Hoàn thành \\ \hline
+    5   & Xử lý missing values (điền bằng PCA)                        & Thành+Nam       & Hoàn thành \\ \hline
+    6   & Phân tích đơn biến                                          & Thành           & Hoàn thành \\ \hline
+    7   & Phân tích đa biến, Khảo sát ngoại lai                       & Nam             & Hoàn thành \\ \hline
+    8   & Mô hình hóa hồi quy tuyến tính đa biến và kiểm định mô hình & Thành           & Hoàn thành \\ \hline
+    9   & Mô hình hóa bằng PCR                                        & Thành           & Hoàn thành \\ \hline
+    10  & Mô hình hóa bằng PLS                                        & Thành+Nam       & Hoàn thành \\ \hline
+    11  & So sánh và đánh giá                                         & Nam             & Hoàn thành \\ \hline
+    12  & Dự đoán và trực quan hóa kết quả                            & Nam             & Hoàn thành \\ \hline
+    \end{tabular}
+\end{table}
+
+
+\subsection{Phân công Hoạt động 2 - Dữ liệu về chất lượng rượu}
+
+Tập dữ liệu về rượu có 2 tập dữ liệu con: rượu vang trắng, và rượu vang đỏ. Nhóm thực hiện khảo sát từng tập dữ liệu con và sau đó kết hợp lại thành 1 bộ dữ liệu với biến bổ sung "color" thể hiện màu sắc của rượu. Bên cạnh đó, nhóm đã đan xen xử lý nếu giả thiết mô hình không thỏa thì nhóm đã sử dụng luôn box-cox transformation, loại bỏ ngoại lai bằng Cook Distance.
+
+\begin{table}[H]
+    \centering 
+    \caption{Bảng phân công Hoạt động 2 - Dữ liệu về chất lượng rượu (rượu vang trắng)}
+    \label{tab:phancong2}
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    STT & Công việc                                                   & Người thực hiện & Kết quả    \\ \hline
+    1   & Đọc dữ liệu và tiền xử lý                                   & Nam             & Hoàn thành \\ \hline
+    2   & Khám phá và tiền xử lý dữ liệu                              & Thành           & Hoàn thành \\ \hline
+    3   & Phân tích đơn biến                                          & Thành           & Hoàn thành \\ \hline
+    4   & Phân tích đa biến, Khảo sát ngoại lai                       & Nam             & Hoàn thành \\ \hline
+    5   & Mô hình hóa hồi quy tuyến tính đa biến                         & Thành           & Hoàn thành \\ \hline
+    6   & Kiểm định các giả thiết của mô hình                        & Thành           & Hoàn thành \\ \hline
+    7  & Dự đoán và trực quan hóa kết quả                            & Thành             & Hoàn thành \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering 
+    \caption{Bảng phân công Hoạt động 2 - Dữ liệu về chất lượng rượu (rượu vang đỏ)}
+    \label{tab:phancong3}
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    STT & Công việc                                                   & Người thực hiện & Kết quả    \\ \hline
+    1   & Đọc dữ liệu và tiền xử lý                                   & Nam             & Hoàn thành \\ \hline
+    2   & Khám phá và tiền xử lý dữ liệu                              & Thành           & Hoàn thành \\ \hline
+    3   & Phân tích đơn biến                                          & Thành           & Hoàn thành \\ \hline
+    4   & Phân tích đa biến, Khảo sát ngoại lai                       & Nam             & Hoàn thành \\ \hline
+    5   & Mô hình hóa hồi quy tuyến tính đa biến                         & Nam           & Hoàn thành \\ \hline
+    6   & Kiểm định các giả thiết của mô hình                        & Nam           & Hoàn thành \\ \hline
+    7  & Dự đoán và trực quan hóa kết quả                            & Nam             & Hoàn thành \\ \hline
+    \end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+    \centering 
+    \caption{Bảng phân công Hoạt động 2 - Dữ liệu về chất lượng rượu (dữ liệu tổng hợp cả trắng và đỏ)}
+    \label{tab:phancong4}
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    STT & Công việc                                                   & Người thực hiện & Kết quả    \\ \hline
+    1   & Đọc dữ liệu và tiền xử lý                                   & Nam             & Hoàn thành \\ \hline
+    2   & Khám phá và tiền xử lý dữ liệu                              & Thành           & Hoàn thành \\ \hline
+    3   & Phân tích đơn biến                                          & Thành           & Hoàn thành \\ \hline
+    4   & Phân tích ảnh hưởng của các biến đối với chất lượng rượu    & Thành           & Hoàn thành \\ \hline
+    5   & Phân tích dựa trên màu sắc của rượu                       & Nam           & Hoàn thành \\ \hline
+    6   & Phân tích tương quan giữa các biến dựa trên màu sắc       & Thành           & Hoàn thành \\ \hline
+    7   & Mô hình hóa hồi quy tuyến tính đa biến                    & Nam           & Hoàn thành \\ \hline
+    8   & Kiểm định các giả thiết của mô hình                        & Nam           & Hoàn thành \\ \hline
+    9  & Dự đoán và trực quan hóa kết quả                            & Nam             & Hoàn thành \\ \hline
+    \end{tabular}
+\end{table}
+
+
+
+\subsection{Phân công Hoạt động 2 - Dữ liệu về chất lượng lượng không khí}
+
+Trong hoạt động này, nhóm đã đan xen xử lý nếu giả thiết mô hình không thỏa thì nhóm đã sử dụng luôn box-cox transformation, loại bỏ ngoại lai bằng Cook Distance.
+
+\begin{table}[H]
+    \centering 
+    \caption{Bảng phân công Hoạt động 2 - Dữ liệu về chất lượng không khí}
+    \label{tab:phancong5}
+    \begin{tabular}{|l|p{6cm}|l|l|}
+    \hline
+    STT & Công việc                                                   & Người thực hiện & Kết quả    \\ \hline
+    1   & Đọc dữ liệu và tiền xử lý                                   & Nam             & Hoàn thành \\ \hline
+    2   & Khám phá và tiền xử lý dữ liệu                              & Thành           & Hoàn thành \\ \hline
+    3   & Phân tích đơn biến                                          & Nam           & Hoàn thành \\ \hline
+    4   & Phân tích đa biến                                          & Thành           & Hoàn thành \\ \hline
+    5   & Mô hình hóa và kiểm định các giả thiết của mô hình hồi quy tuyến tính  & Nam           & Hoàn thành \\ \hline
+    6   & Mô hình hóa và kiểm định các giả thiết của mô hình PCR  & Thành           & Hoàn thành \\ \hline
+    7   & Mô hình hóa và kiểm định các giả thiết của mô hình PLS  & Thành           & Hoàn thành \\ \hline
+    8   & Cải tiến (Random Forest và SVM) & Thành+Nam           & Hoàn thành \\ \hline
+    9   & So sánh, trực quan hóa kết quả & Thành+Nam           & Hoàn thành \\ \hline
+    \end{tabular}
+\end{table}
+
+
+\subsection{Phân công Hoạt động 2 - Dữ liệu về tương tác trên mạng xã hội}
+
+\begin{table}[H]
+    \centering
+    \caption{Bảng phân công Hoạt động 2 - Dữ liệu về tương tác mạng xã hội}
+    \label{tab:phancong6}
+    \begin{tabular}{llll}
+    \hline
+    \multicolumn{1}{|l|}{STT} & \multicolumn{1}{l|}{Công việc}                          & \multicolumn{1}{l|}{Người thực hiện} & \multicolumn{1}{l|}{Kết quả}    \\ \hline
+    \multicolumn{1}{|l|}{1}   & \multicolumn{1}{l|}{Đọc dữ liệu và tiền xử lý}          & \multicolumn{1}{l|}{Nam}             & \multicolumn{1}{l|}{Hoàn thành} \\ \hline
+    \multicolumn{1}{|l|}{2}   & \multicolumn{1}{l|}{Kiểm định các giả thiết thống kê}   & \multicolumn{1}{l|}{Thành}           & \multicolumn{1}{l|}{Hoàn thành} \\ \hline
+    \multicolumn{1}{|l|}{3}   & \multicolumn{1}{l|}{Phân tích phương sai k nhân tố}     & \multicolumn{1}{l|}{Nam}           & \multicolumn{1}{l|}{Hoàn thành} \\ \hline
+    \multicolumn{1}{|l|}{4}   & \multicolumn{1}{l|}{Xây dựng và kiểm định mô hình cộng} & \multicolumn{1}{l|}{Thành}             & \multicolumn{1}{l|}{Hoàn thành} \\ \hline
+    \multicolumn{1}{|l|}{5}   & \multicolumn{1}{l|}{Cải tiến mô hình}                   & \multicolumn{1}{l|}{Thành}           & \multicolumn{1}{l|}{Hoàn thành} \\ \hline           
+    \end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+	\begin{tabular}{p{10cm}p{5cm}}
+		\toprule Công việc                                                            & Thời gian                         \\
+		\midrule 
+        Nhận đồ án và thực hiện Hoạt động 1                 & 10/07/2024 - 17/07/2024 \\
+		Tìm dữ liệu và thực hiện Hoạt động 2                                & 19/07/2024 - 26/07/2024 \\
+		Viết báo cáo & 27/07/2024 - 02/07/2024 \\
+		Điều chỉnh và bổ sung                                                  & 03/08/2024 - 09/08/2024 \\
+		\bottomrule
+	\end{tabular}
+	\caption{Kết hoạch thực hiện nghiên cứu đồ án.}
+	\label{tab:plan_thesis}
+\end{table}
+
+
+
+

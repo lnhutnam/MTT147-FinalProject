@@ -1,0 +1,63 @@
+\documentclass[a4paper]{report}
+\input{./preamble.tex}
+% \usepackage{cmbright}
+\usepackage[backend=bibtex,sorting=nyvt,block=none,defernumbers=true,autolang=other]{biblatex}
+\addbibresource{refs.bib}
+
+\renewcommand\Authand{ \quad\quad } % Change 'and' to 'và'
+\renewcommand\Authands{ \quad\quad } % Change 'and' to 'và' for multiple authors
+
+\makeatletter
+\DeclareRobustCommand*{\mfaktor}[3][]
+{
+   { \mathpalette{\mfaktor@impl@}{{#1}{#2}{#3}} }
+}
+\newcommand*{\mfaktor@impl@}[2]{\mfaktor@impl#1#2}
+\newcommand*{\mfaktor@impl}[4]{
+   \settoheight{\faktor@zaehlerhoehe}{\ensuremath{#1#2{#3}}}%
+   \settoheight{\faktor@nennerhoehe}{\ensuremath{#1#2{#4}}}%
+      \raisebox{-0.5\faktor@zaehlerhoehe}{\ensuremath{#1#2{#3}}}%
+      \mkern-4mu\diagdown\mkern-5mu%
+      \raisebox{0.5\faktor@nennerhoehe}{\ensuremath{#1#2{#4}}}%
+}
+\makeatother
+
+\DeclareMathOperator{\Ker}{ker}
+\DeclareMathOperator{\im}{Im}
+
+\title{BÁO CÁO ĐỒ ÁN KẾT THÚC MÔN HỌC \\ MÔ HÌNH HÓA THỐNG KÊ}
+\author[1,2]{Lê Nhựt Nam}
+\author[1,2]{Phạm Thừa Tiểu Thành}
+\affil[1]{Khoa Toán - Tin học, Trường Đại học Khoa học Tự nhiên}
+\affil[2]{Đại học Quốc gia TP.HCM}
+
+
+\begin{document}
+    \maketitle
+    \contents
+    
+    \input{ack}
+
+    % Danh mục các bảng
+    \listTables
+
+    % Danh mục các hình vẽ, đồ thị
+    \listImages
+
+    \input{introduction}
+
+
+    \input{part01.1}
+    \input{part01.2}
+
+    \input{part02.1}
+    \input{part02.2}
+    \input{part02.3}
+
+    \input{conclusion}
+
+   %  % Tài liệu tham khảo
+   %  \refs
+   %  \nocite{*}
+    
+\end{document}
