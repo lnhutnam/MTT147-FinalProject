@@ -1280,8 +1280,39 @@ Multiple R-squared:  0.2087,	Adjusted R-squared:  0.2076
 F-statistic: 186.4 on 7 and 4946 DF,  p-value: < 2.2e-16
 \end{lstlisting}
 
+Nhận xét:
+\begin{itemize}
+    \item Adjusted R-squared 0.2076 có nghĩa là 20.76\% phương sai của biến quality được giải thích bởi các biến độc lập trong mô hình.
+    \item Ta thu được phương trình quality ~ volatile.acidity + chlorides + density + pH + sulphates + alcohol, có nghĩa là chất lượng rượu phụ thuộc vào các yếu tố như lượng muối, mật độ, nồng độ pH, sulphates, nồng độ cồn và độ acid bay hơi. 
+    \item Lượng muối và độ acid bay hơi có ảnh hưởng tiêu cực đến chất lượng rượu. Vì thế, để đảm bảo chất lượng, cần điều chỉnh giảm thiểu lượng muối và acid trong rượu.
+\end{itemize}
+
+Phân tích thặng dư, ta được kết quả:
+\begin{lstlisting}
+    Shapiro-Wilk normality test
+
+    data:  model$residuals
+    W = 0.83609, p-value < 2.2e-16
+    
+    [1] "H0 rejected: the residuals are NOT distributed normally"
+\end{lstlisting}
+
+Kết quả cho thấy các biến thặng dư không có phân phối chuẩn. Vì thế các phân tích về sau có thể không đảm bảo được tính tin cậy.
 
 \subsubsection{Đánh giá hiệu suất và dự đoán kết quả}
 
 
+Các kết quả trên các độ đo:
+\begin{itemize}
+    \item RMSE: 0.0042
+    \item MAE: 0.002927
+\end{itemize}
+
+Trực quan hóa trong mã nguồn.
+
 \subsection{Kết luận}
+
+\begin{itemize}
+    \item Ta thu được phương trình quality ~ volatile.acidity + chlorides + density + pH + sulphates + alcohol, có nghĩa là chất lượng rượu phụ thuộc vào các yếu tố như lượng muối, mật độ, nồng độ pH, sulphates, nồng độ cồn và độ acid bay hơi. 
+    \item Lượng muối và độ acid bay hơi có ảnh hưởng tiêu cực đến chất lượng rượu. Vì thế, để đảm bảo chất lượng, cần điều chỉnh giảm thiểu lượng muối và acid trong rượu.
+\end{itemize}
